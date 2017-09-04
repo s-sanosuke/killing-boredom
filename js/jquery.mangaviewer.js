@@ -132,8 +132,8 @@
 				} else {
 				
 					// 最大ページ数を設定
-					// var max_view =Math.ceil(o.options.page / 2);
-					var max_view =Math.ceil(o.options.page / 1);
+					var max_view =Math.ceil(o.options.page / 2);
+					// var max_view =Math.ceil(o.options.page / 1);
 
 			
 					// ページャーを生成。現在ページはアクティブに
