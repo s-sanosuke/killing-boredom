@@ -8,17 +8,50 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="../../js/jquery.mangaviewer.js" type="text/javascript"></script>
+<!-- <script src="../../js/jquery.mangaviewer.js" type="text/javascript"></script> -->
+<script src="../../js/manga.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../flexslider.css" type="text/css" />
+<script src="../../js/jquery.flexslider.js"></script>
 <script type="text/javascript">
-$(document).ready(function() {
-	// 漫画ビュアープロパティ
-	$('#viewer').mangaviewer({
-		page: 4,	//ページ数
-		path: './',	//ディレクトリパス
-		ext: 'jpg',	//拡張子
-		page_ejection: 'left' //ページ送り
+	$(document).ready(function() {
+		var windowWidth = $(window).width();
+		var windowHeight = $(window).height();
+		var aspect = windowHeight/windowWidth
+		Screen('right');
 	});
-});
+
+	var resizeTimer;
+	$(window).on('resize', function() {
+		console.log('resize');
+		var windowWidth = $(window).width();
+		var windowHeight = $(window).height();
+		var aspect = windowHeight/windowWidth
+		if (aspect > 0.757) {
+			//スマホ時に行う処理を書く,スクロールで表示したい
+			console.log('縦');
+			Screen('right')
+		} else {
+			console.log('横');
+			//タブレット、PCに行う処理を書く
+			Screen('left')
+		} 
+	    clearTimeout(resizeTimer);
+	    resizeTimer = setTimeout(function() {
+	  }, 200);
+	});
+
+	function Screen(act) {
+		$('#viewer').mangaviewer({
+			page: 4,	//ページ数
+			path: './',	//ディレクトリパス
+			ext: 'jpg',	//拡張子
+			page_ejection: act, //ページ送り
+			viwer_mode: 'PC'
+		});
+	}
+		$(window).load(function() {
+		$('.flexslider').flexslider();
+		});
 </script>
 
 <style>
@@ -34,7 +67,6 @@ $(document).ready(function() {
 	/*width:400px;*/
 	cursor:pointer;
 }
-
 #viewer #page-link{
 	clear:both;
 	text-align:center;
@@ -48,7 +80,12 @@ $(document).ready(function() {
 </head>
 <body>
 
+	<div class="flexslider">
+		<ul class="slides">
+		
 <div id="viewer"></div>
+		</ul>
+		</div>
 
 </body>
 </html>
