@@ -5,14 +5,11 @@ var window_long
 function MangaScreen(number){
     CreateIMG(number)
     var wh = WidthHeight()
-    console.log(wh);
     //スマホ時に行う処理を書く
     if (wh == 'vertical') {
-        console.log('縦');
         $('.slider').children('img').removeClass('prev');
         $('.slider').children('img').addClass('next');
         $(".slider").width($(window).width()*0.9);
-        console.log($(".slider").width($(window).width()*0.9));
         $('.slider').slick({
             infinite: false,
             slidesToShow: 1,
@@ -25,7 +22,6 @@ function MangaScreen(number){
     } 
     //タブレット、PCに行う処理を書く
     else {
-        console.log('横');
         $(".slider").width(($(window).height())*1.416);
         $('.slider').slick({
             rtl: true,
@@ -40,7 +36,6 @@ function MangaScreen(number){
 
 // 画面サイズが変わったら呼ぶ関数
 $(window).on('resize', function() {
-    console.log('resize');
     var wh = WidthHeight()
     if (wh == 'vertical') {
         $(".slider").width($(window).width()*0.9);
