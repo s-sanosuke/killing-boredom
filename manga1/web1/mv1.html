@@ -3,89 +3,35 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>manga viewer</title>
+<title>KILLING×BOREDOM 第1話</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
-<!-- <script src="../../js/jquery.mangaviewer.js" type="text/javascript"></script> -->
-<script src="../../js/manga.js" type="text/javascript"></script>
-<link rel="stylesheet" href="../../flexslider.css" type="text/css" />
-<script src="../../js/jquery.flexslider.js"></script>
+<script src="../../js/slick/slick.min.js"></script>
+<script src="../../js/manga_slider.js"></script>
+<link rel="stylesheet" href="../../js/slick/slick.css">
+<link rel="stylesheet" href="../../js/slick/slick-theme.css">
 <script type="text/javascript">
 	$(document).ready(function() {
-		var windowWidth = $(window).width();
-		var windowHeight = $(window).height();
-		var aspect = windowHeight/windowWidth
-		Screen('right');
+		var num = 4; //ページ数
+		MangaScreen(num)
 	});
-
-	var resizeTimer;
-	$(window).on('resize', function() {
-		console.log('resize');
-		var windowWidth = $(window).width();
-		var windowHeight = $(window).height();
-		var aspect = windowHeight/windowWidth
-		if (aspect > 0.757) {
-			//スマホ時に行う処理を書く,スクロールで表示したい
-			console.log('縦');
-			Screen('right')
-		} else {
-			console.log('横');
-			//タブレット、PCに行う処理を書く
-			Screen('left')
-		} 
-	    clearTimeout(resizeTimer);
-	    resizeTimer = setTimeout(function() {
-	  }, 200);
-	});
-
-	function Screen(act) {
-		$('#viewer').mangaviewer({
-			page: 4,	//ページ数
-			path: './',	//ディレクトリパス
-			ext: 'jpg',	//拡張子
-			page_ejection: act, //ページ送り
-			viwer_mode: 'PC'
-		});
-	}
-		$(window).load(function() {
-		$('.flexslider').flexslider();
-		});
-</script>
-
+	</script>
 <style>
-/* mangaviewer css */
-#viewer .sheet{
-	/*width:100%;*/
-	/*height: 100vh;*/
-	text-align:center;
+body {background-color: #0B0B3B;}
+.slider {
+	/*max-width: 600px;*/
+	margin: 0 auto 0px;
+    text-align:center;
 }
-#viewer img{
-	/*width:50%;*/
-	height: 90vh;
-	/*width:400px;*/
+.slider img {
+    height: 100vh;
 	cursor:pointer;
 }
-#viewer #page-link{
-	clear:both;
-	text-align:center;
-}
-#viewer #page-link .btn.active{
-	border: inset 2px #086A87;
-	background-color:#2E9AFE;
-}
-/* mangaviewer css */
 </style>
 </head>
 <body>
-
-	<div class="flexslider">
-		<ul class="slides">
-		
-<div id="viewer"></div>
-		</ul>
-		</div>
-
+	<div class="slider" dir='rtl' style="width: 100px"></div>
 </body>
 </html>
