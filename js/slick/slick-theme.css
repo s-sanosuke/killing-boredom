@@ -27,6 +27,12 @@ body {background-color: #0B0B3B;}
     height: 100vh;
     cursor:pointer;
 }
+#pre {
+    /* margin-top: 20vh; */
+}
+#nex {
+    /* margin-left: 20vh; */
+}
 
 /* Arrows */
 .slick-prev,
