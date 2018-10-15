@@ -18,6 +18,12 @@
 
 /*Viewer*/
 body {background-color: #0B0B3B;}
+#rogo {
+    width: 426px;
+    height: 178px;
+    display: block;
+    margin:auto;
+ }
 .slider {
 	/*max-width: 600px;*/
 	margin: 0 auto 0px;
@@ -27,12 +33,46 @@ body {background-color: #0B0B3B;}
     height: 100vh;
     cursor:pointer;
 }
-#pre {
-    /* margin-top: 20vh; */
-}
+.buttons {
+    text-align:center;
+ }
+
 #nex {
-    /* margin-left: 20vh; */
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border: 1px solid;
+    border-radius: 10px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 30px;
+    background: #3498db;
+    padding: 10px 20px 11px 20px;
+    text-decoration: none; 
 }
+  
+#nex:hover {
+    background: #3cb0fd;
+    text-decoration: none;
+}
+
+#pre {
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border: 1px solid;
+    border-radius: 10px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 30px;
+    background: #23a356;
+    padding: 10px 20px 11px 20px;
+    text-decoration: none;
+}
+  
+#pre:hover {
+    background: #2ee6a3;
+    text-decoration: none;
+}
+
 
 /* Arrows */
 .slick-prev,
