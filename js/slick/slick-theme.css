@@ -48,11 +48,13 @@ body {background-color: #0B0B3B;}
     background: #3498db;
     padding: 10px 20px 11px 20px;
     text-decoration: none; 
+    cursor:pointer;
 }
   
 #nex:hover {
     background: #3cb0fd;
     text-decoration: none;
+    
 }
 
 #pre {
@@ -66,6 +68,7 @@ body {background-color: #0B0B3B;}
     background: #23a356;
     padding: 10px 20px 11px 20px;
     text-decoration: none;
+    cursor:pointer;
 }
   
 #pre:hover {
