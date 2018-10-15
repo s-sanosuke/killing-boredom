@@ -101,8 +101,8 @@ function CreateIMG(number){
 		html_img += '<img class="' + page + '" src="' + String(i) + '.jpg">';
       }
     html_img +='<span id="sp" style="background-color: #FFFFFF">'
-    +'<div class="buttuns"><br><br><br><br><p><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="KILLING×BOREDOM" data-url="https://killing-boredom.amebaownd.com/" data-via="3900x" data-hashtags="KILLING×BOREDOM" data-dnt="true" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>'
-    +'<br><br><p><button id="pre">前の話</button></p><br><br><p><button id="nex">次の話</button></p><br><br><br>'
-    +'<br><br><br><br><p><a href="https://killing-boredom.amebaownd.com/pages/1199051/blog"><img src="../../js/web_rogo.png" id="rogo">ホームへ戻る</a></p></div></span>';    
+    +'<div class="buttuns"><br><p><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="KILLING×BOREDOM" data-url="https://killing-boredom.amebaownd.com/" data-via="3900x" data-hashtags="KILLING×BOREDOM" data-dnt="true" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>'
+    +'<br><p><button id="pre">前の話</button></p><br><br><p><button id="nex">次の話</button></p><br>'
+    +'<br><p><a href="https://killing-boredom.amebaownd.com/pages/1199051/blog"><img src="../../js/web_rogo.png" id="rogo">ホームへ戻る</a></p></div></span>';    
 	$('.slider').append(html_img);
 }
