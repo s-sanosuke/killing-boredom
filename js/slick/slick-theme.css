@@ -15,6 +15,65 @@
     src: url('./fonts/slick.eot');
     src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
 }
+
+/*Viewer*/
+body {background-color: #0B0B3B;}
+#rogo {
+    width: 426px;
+    height: 178px;
+    display: block;
+    margin:auto;
+ }
+.slider {
+	/*max-width: 600px;*/
+	margin: 0 auto 0px;
+    text-align:center;
+}
+.slider img {
+    height: 100vh;
+    cursor:pointer;
+}
+.buttons {
+    text-align:center;
+ }
+
+#nex {
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border: 1px solid;
+    border-radius: 10px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 30px;
+    background: #3498db;
+    padding: 10px 20px 11px 20px;
+    text-decoration: none; 
+}
+  
+#nex:hover {
+    background: #3cb0fd;
+    text-decoration: none;
+}
+
+#pre {
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border: 1px solid;
+    border-radius: 10px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 30px;
+    background: #23a356;
+    padding: 10px 20px 11px 20px;
+    text-decoration: none;
+}
+  
+#pre:hover {
+    background: #2ee6a3;
+    text-decoration: none;
+}
+
+
 /* Arrows */
 .slick-prev,
 .slick-next
